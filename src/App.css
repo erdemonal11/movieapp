@@ -1,0 +1,95 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.image {
+  height: 30px;
+  width: 30px;
+}
+
+.filmposter {
+  height: 55vh;
+  width: 20vw;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  text-align: center;
+  font-size: 25px;
+}
+
+.item1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.item3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.item4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.item5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.item6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+a {
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+h1 {
+  font-family: "Nabla", cursive;
+  background-color: #262626;
+  font-size: 70px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.text {
+  font-family: "Oxanium", cursive;
+  font-size: 16px;
+}
+
+.starter {
+  background-color: #262626;
+}
+.movietext {
+  background-color: #1a1a1a;
+  font-family: "Oxanium", cursive;
+  font-size: 16px;
+  border-radius: 10px;
+ 
+  
+}
+h2{
+  font-size: 40px;
+}
+
+.movieposter{
+  height: 55vh;
+  width: 20vw;
+  justify-content: flex-start;
+
+}
