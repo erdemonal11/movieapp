@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../App.css";
+import "../dot.jsx";
 
 const Movie4 = () => {
   const desiredEpisodeId = 1;
@@ -38,7 +39,18 @@ const Movie4 = () => {
             <p>Created Date: {desiredMovie.created}</p>
           </div>
         ) : (
-          <div><img src={`/assets/4.jpg`} className="filmposter" alt="playlogo" /><p>Loading...</p></div>
+          <div>
+            <img src={`/assets/4.jpg`} className="filmposter" alt="playlogo" />
+            <p>
+              Loading <br />
+              <br />
+              <div className="bouncing-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </p>
+          </div>
         )}
       </div>
       <div>
@@ -52,4 +64,3 @@ const Movie4 = () => {
 };
 
 export default Movie4;
-

@@ -14,6 +14,8 @@ import Movie4 from './pages/Movie4.jsx';
 import Movie5 from './pages/Movie5.jsx';
 import Movie6 from './pages/Movie6.jsx';
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",

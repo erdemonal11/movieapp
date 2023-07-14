@@ -14,6 +14,7 @@ const Home = () => {
       console.log(response.data.results);
       setMovies(response.data.results);
     };
+    console.log(movies);
   
     fetchMovies();
   }, []);
