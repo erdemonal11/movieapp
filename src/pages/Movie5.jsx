@@ -40,7 +40,7 @@ const Movie5 = () => {
           </div>
         ) : (
           <div>
-            <img src={`/assets/5.jpeg`} className="filmposter" alt="playlogo" />
+            <img src={`/assets/5.jpg`} className="filmposter" alt="playlogo" />
             <p>
               Loading <br />
               <br />
@@ -56,7 +56,7 @@ const Movie5 = () => {
       <div>
         <br />
         <button className="text">
-          <Link to={"/"}>Go Back</Link>
+          <Link to={"/home"}>Go Back</Link>
         </button>
       </div>
     </>

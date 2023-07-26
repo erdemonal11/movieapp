@@ -7,11 +7,13 @@ import "../dot.jsx";
 const Movie2 = () => {
   const desiredEpisodeId = 5;
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchMovies = async () => {
       const response = await axios.get("https://swapi.dev/api/films/");
       setMovies(response.data.results);
+      setIsLoading(false);
     };
 
     fetchMovies();
@@ -23,41 +25,40 @@ const Movie2 = () => {
 
   return (
     <>
-      <div className="movietext">
-        {desiredMovie ? (
-          <div key={desiredMovie.episode_id}>
-            <h2>{desiredMovie.title}</h2>
-            <p>Episode {desiredMovie.episode_id}</p>
+      {desiredMovie ? (
+        <div className="asd">
+        <div className="movietext crawl">
+          <h2>{desiredMovie.title}</h2>
+          <div>Episode {desiredMovie.episode_id}</div>
+          <div>{desiredMovie.opening_crawl}</div>
+          <div>Producers: {desiredMovie.producer}</div>
+          <div>Director: {desiredMovie.director}</div>
+          <div>Release Date: {desiredMovie.release_date}</div>
+          <div>Edit Date: {desiredMovie.edited}</div>
+          <div>Created Date: {desiredMovie.created}</div>
+        </div>
+        </div>
+      ) : (
+        <div>
+          <img src={`/assets/2.jpg`} className="filmposter" alt="playlogo" />
+          <p className="text">
+            Loading <br />
             <br />
-            <p>{desiredMovie.opening_crawl}</p>
-            <br />
-            <p>Producers: {desiredMovie.producer}</p>
-            <p>Director: {desiredMovie.director}</p>
-            <p>Release Date: {desiredMovie.release_date}</p>
-            <br />
-            <p>Edit Date :{desiredMovie.edited}</p>
-            <p>Created Date: {desiredMovie.created}</p>
-          </div>
-        ) : (
-          <div>
-            <img src={`/assets/2.jpg`} className="filmposter" alt="playlogo" />
-            <p>
-              Loading <br />
-              <br />
-              <div className="bouncing-loader">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </p>
-          </div>
-        )}
-      </div>
+            <div className="bouncing-loader">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </p>
+        </div>
+      )}
       <div>
         <br />
-        <button className="text">
-          <Link to={"/"}>Go Back</Link>
-        </button>
+        <div>
+          <button className="text">
+            <Link to={"/home"}>Go Back</Link>
+          </button>
+        </div>
       </div>
     </>
   );

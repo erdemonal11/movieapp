@@ -40,7 +40,9 @@ const Movie3 = () => {
             <p>Created Date: {desiredMovie.created}</p>
           </div>
         ) : (
-          <div><img src={`/assets/3.jpg`} className="filmposter" alt="playlogo" /><p>
+          <>
+          <div><img src={`/assets/3.jpg`} className="filmposter" alt="playlogo" /></div>
+          <p>
           Loading{" "}
           <br /><br />
           <div className="bouncing-loader">
@@ -48,13 +50,14 @@ const Movie3 = () => {
             <div></div>
             <div></div>
           </div>
-        </p></div>
+        </p>
+        </>
         )}
       </div>
       <div>
         <br />
         <button className="text">
-          <Link to={"/"}>Go Back</Link>
+          <Link to={"/home"}>Go Back</Link>
         </button>
       </div>
     </>
